@@ -1,0 +1,228 @@
+@font-face {
+    font-family:"proxima";
+    src: url(/fonts/proximanova_regular.ttf);
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #b8c7cc;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "proxima", sans-serif;
+}
+/* Group 2xx: Thunderstorm */
+#ImageSection.Thunderstorm{
+  background-image: url('../img/thunderstorm.jpg');
+}
+/* Group 3xx: Drizzle */
+#ImageSection.Drizzle{
+  background-image: url('../img/drizzle.jpg');
+}
+/* Group 5xx: Rain */
+#ImageSection.Rain{
+  background-image: url('../img/rain.jpg');
+}
+/* Group 6xx: Snow */
+#ImageSection.Snow{
+  background-image: url('../img/snow.jpg');
+}
+/* Group 7xx: Atmosphere */
+#ImageSection.Mist{
+  background-image: url('../img/mist.jpg');
+}
+#ImageSection.Smoke{
+  background-image: url('../img/haze.jpg');
+}
+#ImageSection.Haze{
+  background-image: url('../img/haze.jpg');
+}
+#ImageSection.Fog{
+  background-image: url('../img/fog.jpg');
+}
+#ImageSection.Sand{
+  background-image: url('../img/sand.jpg');
+}
+#ImageSection.Dust{
+  background-image: url('../img/dust.jpg');
+}
+#ImageSection.Ash{
+  background-image: url('../img/ash.jpg');
+}
+#ImageSection.Squall{
+  background-image: url('../img/squall.jpg');
+}
+#ImageSection.Tornado{
+  background-image: url('../img/tornado.jpg');
+}
+/* Group 800: Clear */
+#ImageSection.Clear{
+  background-image: url('../img/clear.jpg');
+}
+/* Group 80x: Clouds */
+#ImageSection.Clouds{
+  background-image: url('../img/clouds.jpg');
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #455D98;
+  color: #fff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+}
+
+#ImageSection {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#ImageSection::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #5c6bc0 10%, 100%);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.default_info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.default_info img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.default_info h2 {
+  font-size: 3rem;
+}
+
+.default_info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather_temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+/* content section */
+#logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    z-index:10;
+}
+
+.content_section {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.content_section form {
+  margin: 5rem 0 1.5rem;
+  position: relative;
+}
+
+.content_section form input {
+  width: 85%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  color: #000;
+  font-size: 1rem;
+}
+
+.content_section form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  background: #1b2236;
+  color: #fff;
+  cursor: pointer;
+}
+
+.day_info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.day_info .content .title {
+  font-weight: 600;
+}
+
+.list_content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 1.5rem 0rem;
+}
+
+.list_content ul li {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.list_content ul li:hover {
+  transform: scale(1.1);
+  background-color: #A9A9A9;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.list_content ul li img {
+  width: 75%;
+  object-fit: cover;
+}
+
+.icons {
+  opacity: 0;
+}
+
+.icons.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  to {
+    transition: all 0.5s ease-in;
+    opacity: 1;
+  }
+}
